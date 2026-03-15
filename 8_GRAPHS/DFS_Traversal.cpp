@@ -1,20 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void DFS(vector<vector<int>>& graph, int st, int node,vector<int>& visited)
+void DFS(vector<vector<int>>& graph, int st, vector<int>& visited)
 {
     visited[st] = 1;
     cout << st << " ";
+
     for(int i : graph[st]){
         if(!visited[i]){
-            DFS(graph,i,node,visited);
+            DFS(graph, i, visited);
         }
     }
-
 }
+
 int main()
 {
-    int n = 6; // number of nodes
+    int n = 6;
 
     vector<vector<int>> adj(n+1);
 
@@ -41,22 +42,16 @@ int main()
     for(int i = 1; i <= n; i++)
     {
         cout << i << " -> ";
-
         for(int x : adj[i])
         {
             cout << x << " ";
         }
-
         cout << endl;
     }
 
-    vector<int> visited(n + 1, 0);
-    DFS(adj,5,n,visited);
-    /*
-    1 ---- 2 ---- 5
-    |      |
-    |      |
-    3 ---- 4 ---- 6
-    */
+    vector<int> visited(n+1,0);
+
+    cout << "\nDFS Traversal: ";
+    DFS(adj,5,visited);
 
 }
