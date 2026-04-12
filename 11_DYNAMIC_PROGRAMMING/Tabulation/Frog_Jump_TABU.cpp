@@ -18,7 +18,7 @@ public:
 
         // 🔷 Start
         dp[0].insert(0);
-
+        
         // 🔷 Fill DP
         for(int i = 0; i < n; i++){
             for(int jump : dp[i]){
