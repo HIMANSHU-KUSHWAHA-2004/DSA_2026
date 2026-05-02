@@ -44,4 +44,13 @@ public:
 
         return Ans(0, arr, sum, dp);
     }
+    int main() {
+        vector<int> arr = {0,0,1};
+        int sum = 1;
+
+        Solution obj;
+        cout << "Memo Answer: " << obj.isSubsetSum(arr, sum) << endl;
+
+        return 0;
+    }
 };
