@@ -52,19 +52,10 @@ public:
         for(int coin : coins){
 
             for(int a = coin; a <= amount; a++){
-
-                /*
-                ===================================================
-                🔥 TRANSITION
-                ===================================================
-
-                dp[a] = min(
-                            not take (old value),
-                            take (use coin again)
-                        )
-                ===================================================
-                */
-
+                /*HERE WHAT WE ARE DOING IS THAT AFTER SELECTING THE COIN WEE WILL SEE HOW THIS COIN IS CONTRIBUTING IN 
+                EACH AMOUNT LIKE AS WE CAN SEE THE AMOUNT IS IN THE INNER LOOP 
+                1. AFTER EVERY INNER LOOP THE DP ARRAY WIL CONTAIN THE BEST ANSWER FOR THE COINS USED FROM THE OUTER LOOP
+                    LIKE IF IT RUN ONCE THEN IT CANTAIN FOR THEE COIN[0] IF IT RUN TWICE THEN IT HAS OF COIN[0] AND COIN[1]*/
                 dp[a] = min(dp[a], 1 + dp[a - coin]);
             }
         }
