@@ -26,6 +26,8 @@ public:
 
                 if (wt[i] <= j) {
                     take = val[i] + curr[j - wt[i]];
+                    //here we know we have to use the different array because we are in the same iteration 
+                    //and we have to take the value from the current array we have infinite number of times we can take the same item.
                 }
 
                 curr[j] = max(take, notake);
