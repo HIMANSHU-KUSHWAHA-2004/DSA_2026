@@ -15,9 +15,7 @@ def explore_folder(current_path):
 
     while True:
 
-        print("\n" + "=" * 60)
-        print(f"📂 CURRENT FOLDER: {os.path.basename(current_path)}")
-        print("=" * 60)
+        print(f"\n📂 CURRENT FOLDER: {os.path.basename(current_path)}")
 
         items = os.listdir(current_path)
 
@@ -52,9 +50,7 @@ def explore_folder(current_path):
             if file.endswith(".exe"):
                 exe_count += 1
 
-        print("\n" + "-" * 60)
-        print(f"⚡ .exe Files Found: {exe_count}")
-        print("-" * 60)
+        print(f"\n.exe Files Found: {exe_count}")
 
         print("\nOPTIONS:")
         print("👉 Enter folder number to OPEN folder")
