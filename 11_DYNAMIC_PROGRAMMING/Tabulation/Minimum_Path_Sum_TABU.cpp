@@ -14,7 +14,7 @@ public:
         // 🟢 start
         dp[0][0] = grid[0][0];
 
-        // 🔵 first row
+        // 🔵 first row.
         for (int j = 1; j < n; j++) {
             dp[0][j] = grid[0][j] + dp[0][j - 1];
         }

@@ -21,6 +21,7 @@ public:
 
             dp[i] = max(pick, notPick);
         }
+        //
 
         return dp[n - 1];
     }

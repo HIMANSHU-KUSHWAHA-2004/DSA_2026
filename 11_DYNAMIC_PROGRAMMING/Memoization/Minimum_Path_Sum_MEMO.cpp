@@ -16,7 +16,7 @@ public:
         // 🟢 destination
         if (i == m - 1 && j == n - 1) return grid[i][j];
 
-        // 🟡 already computed
+        // 🟡 already computed.
         if (dp[i][j] != -1) return dp[i][j];
 
         int down = DFS(i + 1, j, grid, dp);

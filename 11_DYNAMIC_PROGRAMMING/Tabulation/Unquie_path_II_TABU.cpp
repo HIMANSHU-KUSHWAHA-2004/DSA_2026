@@ -14,7 +14,7 @@ public:
         if (ob[0][0] == 1) return 0;
         dp[0][0] = 1;
 
-        // first column
+        // first column.
         for (int i = 1; i < m; i++) {
             if (ob[i][0] == 0)
                 dp[i][0] = dp[i - 1][0];

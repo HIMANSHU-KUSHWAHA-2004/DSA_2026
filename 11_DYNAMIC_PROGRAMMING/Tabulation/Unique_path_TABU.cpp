@@ -19,7 +19,7 @@ public:
                     int down = 0;
                     int right = 0;
 
-                    // boundary check (important fix)
+                    // boundary check (important fix).
                     if (i > 0) down = dp[i - 1][j];
                     if (j > 0) right = dp[i][j - 1];
 

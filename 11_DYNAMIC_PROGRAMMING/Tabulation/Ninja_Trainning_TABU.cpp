@@ -11,15 +11,14 @@ public:
 
         // Base case
         dp[0][0] = max(mat[0][1], mat[0][2]);
-        dp[0][1] = max(mat[0][0], mat[0][2]);
+        dp[0][1] = max(mat[0][0], mat[0][2]);// 1 means 1 wali acticuty nhi ki
         dp[0][2] = max(mat[0][0], mat[0][1]);
-        dp[0][3] = max({mat[0][0], mat[0][1], mat[0][2]});
+        dp[0][3] = max({mat[0][0], mat[0][1], mat[0][2]}); // 3 means koi activity nhi kari
 
         for (int day = 1; day < n; day++)
         {
             for (int last = 0; last < 4; last++)
             {
-                dp[day][last] = 0;
 
                 for (int task = 0; task < 3; task++)
                 {

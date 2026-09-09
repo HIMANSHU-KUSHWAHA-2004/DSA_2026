@@ -2,7 +2,7 @@ import os
 from datetime import datetime
 
 # Main Folder Path
-MAIN_PATH = r"C:\Users\hk565\OneDrive\Desktop\DSA"
+MAIN_PATH = r"C:\Users\hk565\Videos\SKILLS\DSA"
 
 # Check if main folder exists
 if not os.path.exists(MAIN_PATH):

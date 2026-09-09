@@ -37,7 +37,7 @@ public:
             }
         }
 
-        // 🔷 Check last stone
+        // 🔷Check last stone
         return !dp[n-1].empty();
     }
 };

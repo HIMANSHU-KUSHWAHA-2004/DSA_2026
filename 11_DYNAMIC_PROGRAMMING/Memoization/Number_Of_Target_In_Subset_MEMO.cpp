@@ -20,6 +20,7 @@ int answer(int idx, vector<int> &arr, int sum,vector<vector<int>>& dp)
     return dp[idx][sum] = take + notake;
 }
 
+
 int main()
 {
     vector<int> arr = {0, 0, 1};

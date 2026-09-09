@@ -48,7 +48,7 @@ public:
                 // ❌ NOT TAKE
                 int notTake = dp[i-1][a];
 
-                // ✅ TAKE (INFINITE → SAME ROW)
+                // ✅ TAKE (INFINITE →' SAME ROW)
                 int take = 1e9;
                 if(coin[i] <= a){
                     take = 1 + dp[i][a - coin[i]];

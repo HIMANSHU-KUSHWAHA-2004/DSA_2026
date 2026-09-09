@@ -6,7 +6,6 @@ public:
 
     // store all LCS strings
     vector<vector<set<string>>> store;
-
     // check if state already computed
     vector<vector<bool>> visited;
 

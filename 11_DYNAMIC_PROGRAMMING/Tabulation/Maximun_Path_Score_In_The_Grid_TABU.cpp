@@ -7,7 +7,7 @@ public:
         int n = grid.size();
         int m = grid[0].size();
 
-        // dp[r][c][cost] = max score to reach (r,c) using 'cost'
+        // dp[r][c][cost] = max score to reach (r,c) using 'cost'/
         vector<vector<vector<int>>> dp(
             n, vector<vector<int>>(m, vector<int>(k + 1, -1))
         );

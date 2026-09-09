@@ -33,7 +33,7 @@ int minDepthBFS(TreeNode *root)
         else
         {
             if (current->left == nullptr && current->right == nullptr)
-    /*THIS IS IMPORTANT STEP MEANS IF THERE IS THE ANY NODE THAT HAVE BOTH NULL CHILDREN THEN THAT IS THE 
+    /*THIS IS .IMPORTANT STEP MEANS IF THERE IS THE ANY NODE THAT HAVE BOTH NULL CHILDREN THEN THAT IS THE 
         MINIMUM HEIGHT OF THE TREE EVEN IF THE QUEUE HAS ELEMENTS BUT WE DO NOT HAVE TO CHECK IS AGAIN*/
                 return height;
 

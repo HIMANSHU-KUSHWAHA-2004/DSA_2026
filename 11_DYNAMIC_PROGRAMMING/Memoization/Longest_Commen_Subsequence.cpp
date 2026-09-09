@@ -4,9 +4,7 @@ using namespace std;
 class Solution
 {
 public:
-    int Boka(int m,
-             int n,
-             string &st1,
+    int Boka(int m, int n, string &st1,
              string &st2,
              vector<vector<int>> &dp)
     {

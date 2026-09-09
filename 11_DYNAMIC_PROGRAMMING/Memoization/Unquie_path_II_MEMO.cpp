@@ -18,6 +18,7 @@ public:
         int right = DFS(r, c + 1, ob, dp);
 
         return dp[r][c] = down + right;
+        
     }
 
     int uniquePathsWithObstacles(vector<vector<int>>& ob) {

@@ -20,7 +20,7 @@ void printSubset(vector<int>& arr, int sum, int n, vector<int>& path) {
 
     if(n < 0) return;
 
-    // NOT TAKE
+    // NOT TAKE.
     printSubset(arr, sum, n-1, path);
 
     // TAKE

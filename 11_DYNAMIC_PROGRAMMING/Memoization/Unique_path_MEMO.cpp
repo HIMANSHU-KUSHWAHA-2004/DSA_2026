@@ -17,7 +17,7 @@ public:
             return 0;
         }
 
-        // 🟡 Already computed
+        // 🟡 Already computed.
         if (dp[r][c] != -1) {
             return dp[r][c];
         }

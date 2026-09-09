@@ -7,7 +7,7 @@ class Solution {
 public:
     int solve(int idx, int W, vector<int>& val, vector<int>& wt, vector<vector<int>>& dp){
         
-        // 🔥 base case
+        // 🔥 base case.
         if(idx == 0){
             if(wt[0] <= W) return val[0];
             return 0;

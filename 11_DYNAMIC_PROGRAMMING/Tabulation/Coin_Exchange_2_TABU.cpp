@@ -12,7 +12,7 @@ int main() {
         if (j % coins[0] == 0)
             dp[0][j] = 1;
     }
-
+//
     for (int i = 1; i < n; i++) {
         for (int j = 0; j <= amount; j++) {
 

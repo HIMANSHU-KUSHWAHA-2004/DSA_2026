@@ -37,7 +37,7 @@ public:
         int n = arr.size();
 
         // Example:
-        // arr = {1,2,3}, sum = 5
+        // arr = {1,2,3}, sum = 5,
         // Output = true (2 + 3)
 
         vector<vector<int>> dp(n, vector<int>(sum + 1, -1));

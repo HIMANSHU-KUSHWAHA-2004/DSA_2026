@@ -13,7 +13,7 @@ public:
             dp[i][0] = true;
         }
 
-        // ✅ base case (first element)
+        // ✅ base case (first element).
         if (arr[0] <= sum)
             dp[0][arr[0]] = true;
 

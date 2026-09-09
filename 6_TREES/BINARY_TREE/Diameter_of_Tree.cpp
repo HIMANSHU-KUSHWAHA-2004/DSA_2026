@@ -55,7 +55,7 @@ int Height(Node *root, int &diameter)
 
     diameter = max(diameter, left_H + right_H + 1);
     /*THIS FUNCTION WILL NOT GIVE THE ANSWER ITSELF BUT WILL STORE THE ANSWER IN THE GLOBAL VARIABLE
-    THAT IS IN THE DIAMETER*/
+    THAT IS IN THE DIAMETER*//
     return max(left_H, right_H) + 1;
 }
 

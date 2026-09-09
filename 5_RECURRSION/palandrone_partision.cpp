@@ -1,46 +1,60 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 bool isPalindrome(string &s, int left, int right) {
     while (left < right) {
-        if (s[left] != s[right]) return false;
+        if (s[left] != s[right])
+            return false;
+
         left++;
         right--;
     }
+
     return true;
 }
 
-void partision(string s, vector<string> &temp, vector<vector<string>> &answer)
-{
-    if (s.size() == 0)
-    {
+void partitioning(int start, string &s,
+                  vector<string> &temp,
+                  vector<vector<string>> &answer) {
+
+    // Base case
+    if (start == s.size()) {
         answer.push_back(temp);
         return;
     }
-    for (int i = 0; i < s.size(); i++)
-    {
-        string sub = s.substr(0, i + 1);
-        if (isPalindrome(sub,0,i))
-        {
-            temp.push_back(sub);
-            partision(s.substr(i + 1), temp, answer);
+
+    // Try every possible partition
+    for (int i = start; i < s.size(); i++) {
+
+        if (isPalindrome(s, start, i)) {
+
+            // Choose
+            temp.push_back(s.substr(start, i - start + 1));
+
+            // Explore
+            partitioning(i + 1, s, temp, answer);
+
+            // Undo
             temp.pop_back();
         }
     }
 }
-int main()
-{
+
+int main() {
+
     string s = "aaba";
-    int n = s.length();
+
     vector<string> temp;
-    vector<vector<string>> ans;
-    partision(s, temp, ans);
-    for (int i = 0; i < ans.size(); i++)
-    {
-        for (int j = 0; j < ans[i].size(); j++)
-        {
-            cout << ans[i][j] << " ";
-        }
+    vector<vector<string>> answer;
+
+    partitioning(0, s, temp, answer);
+
+    for (auto &x : answer) {
+        for (auto &y : x)
+            cout << y << " ";
+
         cout << endl;
     }
+
     return 0;
 }

@@ -60,7 +60,7 @@ int main() {
     string s2 = "acdghr";
 
     Solution obj;
-
+//
     cout << obj.longestCommonSubstring(s1, s2);
 
     return 0;

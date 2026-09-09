@@ -16,7 +16,7 @@ public:
 
 // Check if two trees are identical
 bool isidentical(TreeNode* t1, TreeNode* t2) {
-    if (!t1 && !t2) return true;     // both null
+    if (!t1 && !t2) return true;     // both null.
     if (!t1 || !t2) return false;    // one null
 
     bool lefter = isidentical(t1->left, t2->left);

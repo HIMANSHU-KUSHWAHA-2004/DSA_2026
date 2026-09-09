@@ -27,7 +27,7 @@ public:
             // One null → not same
             if (!n1 || !n2) return false;
 
-            // Values differ → not same
+            // Values differ → not same.
             if (n1->val != n2->val) return false;
 
             // Push children
